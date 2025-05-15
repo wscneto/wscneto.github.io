@@ -6,9 +6,71 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+        <link
+            rel="icon"
+            href="assets/wn-icon.png"
+        />
         <title>Walter Neto</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <main>
+            <section id="hero">
+                <h1>Hello, my name is Walter Neto.</h1>
+                <p>I'm a Software Engineer.</p>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I'm Walter Neto, a passionate Computer Science student at
+                    the Federal University of Alagoas (UFAL). I enjoy building
+                    web applications and exploring new technologies.
+                </p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Graphs Algorithms</h3>
+                    <p>description...</p>
+                </div>
+                <div class="project">
+                    <h3>Bookaholic</h3>
+                    <p>description...</p>
+                </div>
+                <div class="project">
+                    <h3>Online Chess using TCP/IP</h3>
+                    <p>description...</p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    You can reach me at:
+                    <a href="mailto:contato.walter@proton.me"
+                        >contato.walter@proton.me</a
+                    >
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Walter Neto</p>
+        </footer>
+
+        <script>
+            // document.querySelectorAll(".project").forEach((proj) => {
+            //     proj.addEventListener("click", () => {
+            //         alert(
+            //             "You clicked on " + proj.querySelector("h3").textContent
+            //         );
+            //     });
+            // });
+        </script>
     </body>
 </html>

@@ -35,12 +35,22 @@ a:hover {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
     background-color: #0a192f;
     color: white;
-    text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    height: 18rem;
+    font-size: 2rem;
 }
 
 footer a {
     color: white;
+}
+
+footer hr {
+    width: 50%;
+    border: 1px solid #606b86;
 }

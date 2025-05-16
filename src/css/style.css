@@ -2,12 +2,21 @@
 @import "tags.css";
 
 #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     background: #0a192f;
     color: white;
 }
 
 #hero p {
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+#hero a {
+    color: white;
+    text-decoration: none;
 }
 
 #hero #my-name {
@@ -17,6 +26,15 @@
 
 #hero #my-name:hover {
     text-decoration: underline;
+}
+
+#hero .know-more {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid white;
 }
 
 .project {
@@ -33,4 +51,21 @@
 
 .project p {
     margin: 0.5rem 0 0 0;
+}
+
+#footer-icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 9rem;
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+#arrow-up-icon {
+    height: 3rem;
+    width: 3rem;
 }

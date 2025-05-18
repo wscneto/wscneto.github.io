@@ -29,34 +29,75 @@
                     >.
                 </h1>
                 <p>I'm a Software Engineer.</p>
-                <a href="#about">
-                    <div class="know-more">Know more</div>
+                <a
+                    href="#about"
+                    class="know-more"
+                >
+                    Know more
                 </a>
             </section>
 
             <section id="about">
                 <h2>About Me</h2>
-                <p>
-                    I'm Walter Neto, a passionate Computer Science student at
-                    the Federal University of Alagoas (UFAL). I enjoy building
-                    web applications and exploring new technologies.
-                </p>
+                <div id="about-content">
+                    <img
+                        src="src/images/walter.jpeg"
+                        alt="Walter's photo"
+                        id="walter-picture"
+                    />
+                    <p>
+                        I'm a twenty year old undergraduate Computer Science
+                        student, photographer and father of an amazing little
+                        boy.
+                    </p>
+                </div>
             </section>
 
             <section id="projects">
                 <h2>Projects</h2>
-                <div class="project">
-                    <h3>Graphs Algorithms</h3>
-                    <p>description...</p>
-                </div>
-                <div class="project">
+                <a
+                    href="https://github.com/wscneto/algoritmos-grafos"
+                    target="_blank"
+                    class="project"
+                >
+                    <h3>Graph Algorithms</h3>
+                    <p>
+                        This is the implementation of 5 graph algorithms:
+                        Dijkstra, Bellman-Ford, Kosaraju, Kruskal and Prim. The
+                        project was crucial to consolidate my graph theory
+                        knowledge. It was written in C.
+                    </p>
+                </a>
+                <a
+                    href="https://github.com/wscneto/bookaholic"
+                    target="_blank"
+                    class="project"
+                >
                     <h3>Bookaholic</h3>
-                    <p>description...</p>
-                </div>
-                <div class="project">
+                    <p>
+                        Bookaholic is an online bookstore made with Vue.js,
+                        Python and MySQL. In this project, I put the Extreme
+                        Programming agile methodology into practice to satisfy
+                        customer's needs. I also implemented a microservices
+                        architecture, separating the program into 6 services:
+                        user, catalog, order, review, recommendation, and an API
+                        gateway. These were made using the Flask library.
+                    </p>
+                </a>
+                <a
+                    href="https://github.com/wscneto/chess-on-tcp"
+                    target="_blank"
+                    class="project"
+                >
                     <h3>Online Chess using TCP/IP</h3>
-                    <p>description...</p>
-                </div>
+                    <p>
+                        Chess is one of my favorite games ever. Why not practice
+                        network programming while having some fun? This is the
+                        idea behind my online chess game. It was made in Python,
+                        using the socket library. The program uses TCP protocol
+                        to connect client and server using their IP addresses.
+                    </p>
+                </a>
             </section>
 
             <section id="contact">
@@ -109,6 +150,5 @@
         </footer>
 
         <script src="src/js/app.js"></script>
-        </script>
     </body>
 </html>

@@ -8,7 +8,7 @@ html {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,10 +24,12 @@ h1 {
 
 h2 {
     font-size: 3rem;
+    font-weight: 700;
 }
 
 h3 {
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
 p {
@@ -36,10 +38,11 @@ p {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 footer {

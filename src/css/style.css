@@ -138,3 +138,155 @@
     height: 3rem;
     width: 3rem;
 }
+
+/* Media queries */
+@media (max-width: 1200px) {
+    #hero p {
+        font-size: 2.5rem;
+    }
+
+    #hero #my-name {
+        font-size: 3.5rem;
+    }
+
+    #about #about-content {
+        gap: 4rem;
+    }
+
+    #about #walter-picture {
+        max-width: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero p {
+        font-size: 2rem;
+    }
+
+    #hero #my-name {
+        font-size: 3rem;
+    }
+
+    #about #about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #about h2 {
+        margin-top: 4rem;
+    }
+
+    #about p {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    #about #walter-picture {
+        max-width: 25rem;
+    }
+
+    .project {
+        max-width: 90%;
+    }
+
+    .project p {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+
+    #hero p {
+        font-size: 1.8rem;
+    }
+
+    #hero #my-name {
+        font-size: 2.5rem;
+    }
+
+    #hero .know-more {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    #about h2 {
+        margin-top: 2rem;
+    }
+
+    #about #walter-picture {
+        max-width: 20rem;
+    }
+
+    .see-code {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    footer {
+        height: 15rem;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .icon {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+    #arrow-up-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    section {
+        padding: 1rem;
+    }
+
+    #hero p {
+        font-size: 1.6rem;
+    }
+
+    #hero #my-name {
+        font-size: 2rem;
+    }
+
+    #hero .know-more {
+        font-size: 1.4rem;
+        padding: 0.6rem;
+    }
+
+    #about h2 {
+        margin-top: 2rem;
+    }
+
+    #about #walter-picture {
+        max-width: 20rem;
+    }
+
+    .see-code {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    footer {
+        height: 15rem;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .icon {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+}

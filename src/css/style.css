@@ -140,7 +140,7 @@
 }
 
 /* Media queries */
-@media (max-width: 1200px) {
+@media (min-width: 881px) {
     #hero p {
         font-size: 2.5rem;
     }
@@ -158,7 +158,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     #hero {
         flex-direction: column;
         text-align: center;
@@ -170,6 +170,11 @@
 
     #hero #my-name {
         font-size: 3rem;
+    }
+
+    #hero .know-more {
+        font-size: 1.7rem;
+        padding: 0.8rem;
     }
 
     #about #about-content {

@@ -1,160 +1,450 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <link
-            rel="stylesheet"
-            href="src/css/style.css"
-        />
-        <link
-            rel="icon"
-            href="src/images/wn-icon.png"
-        />
-        <title>Walter Neto</title>
-    </head>
-    <body>
-        <main>
-            <section id="hero">
-                <h1>
-                    Hello, my name is
-                    <a
-                        href="https://www.github.com/wscneto"
-                        target="_blank"
-                        id="my-name"
-                        >Walter Neto</a
-                    >.
-                </h1>
-                <p>I'm a Software Engineer.</p>
-                <a
-                    href="#about"
-                    class="know-more"
-                >
-                    Know more
-                </a>
-            </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walter Soares — Portfolio</title>
+    <link rel="icon" type="image/png" href="src/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-            <section id="about">
-                <h2>About Me</h2>
-                <div id="about-content">
-                    <img
-                        src="src/images/walter.jpeg"
-                        alt="Walter's photo"
-                        id="walter-picture"
-                    />
-                    <p>
-                        I'm a twenty year old undergraduate Computer Science
-                        student, photographer and father of an amazing little
-                        boy.
-                    </p>
-                </div>
-            </section>
+    <!-- Graph background -->
+    <canvas id="graph-canvas"></canvas>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Graph Algorithms</h3>
-                    <p>
-                        This is the implementation of 5 graph algorithms:
-                        Dijkstra, Bellman-Ford, Kosaraju, Kruskal and Prim. The
-                        project was crucial to consolidate my graph theory
-                        knowledge. It was written in C.
-                    </p>
-                    <a
-                        href="https://github.com/wscneto/algoritmos-grafos"
-                        target="_blank"
-                        class="see-code"
-                        >See Code</a
-                    >
-                </div>
-                <div class="project">
-                    <h3>Bookaholic</h3>
-                    <p>
-                        Bookaholic is an online bookstore made with Vue.js,
-                        Python and MySQL. In this project, I put the Extreme
-                        Programming agile methodology into practice to satisfy
-                        customer's needs. I also implemented a microservices
-                        architecture, separating the program into 6 services:
-                        user, catalog, order, review, recommendation, and an API
-                        gateway. These were made using the Flask library.
-                    </p>
-                    <a
-                        href="https://github.com/wscneto/bookaholic"
-                        target="_blank"
-                        class="see-code"
-                        >See Code</a
-                    >
-                </div>
-                <div class="project">
-                    <h3>Online Chess using TCP/IP</h3>
-                    <p>
-                        Chess is one of my favorite games ever. Why not practice
-                        network programming while having some fun? This is the
-                        idea behind my online chess game. It was made in Python,
-                        using the socket library. The program uses TCP protocol
-                        to connect client and server using their IP addresses.
-                    </p>
-                    <a
-                        href="https://github.com/wscneto/chess-on-tcp"
-                        target="_blank"
-                        class="see-code"
-                        >See Code</a
-                    >
-                </div>
-            </section>
+    <!-- ── NAV ── -->
+    <nav>
+      <div class="wrap">
+        <a href="#hero" class="nav-logo">Walter Neto</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>
-                    You can reach me at:
-                    <a
-                        href="mailto:contato.walter@proton.me"
-                        target="_blank"
-                        >contato.walter@proton.me</a
-                    >
-                </p>
-            </section>
-        </main>
-
-        <footer>
-            <a href="#hero">
-                <img
-                    src="src/images/arrow-up.svg"
-                    alt="arrow up icon"
-                    class="icon"
-                    id="arrow-up-icon"
-                />
-            </a>
-            <div id="footer-icons-container">
-                <a
-                    href="https://www.github.com/wscneto"
-                    target="_blank"
-                >
-                    <img
-                        src="src/images/github.svg"
-                        alt="github icon"
-                        class="icon"
-                        id="github-icon"
-                    />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/wscneto/"
-                    target="_blank"
-                >
-                    <img
-                        src="src/images/linkedin.svg"
-                        alt="linkedin icon"
-                        class="icon"
-                        id="linkedin-icon"
-                    />
-                </a>
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="wrap">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-tag">
+              Computer Science &middot; UFAL &middot; Brazil
             </div>
-            <hr />
-        </footer>
+            <h1 class="hero-name">
+              Walter<br />
+              Neto
+            </h1>
+            <p class="hero-subtitle">
+              Software engineer &amp; researcher in training.
+            </p>
+            <div class="hero-badges">
+              <span class="badge">Web Development</span>
+              <span class="badge">AI &amp; ML</span>
+              <span class="badge">Graph Theory</span>
+              <span class="badge">Algorithms</span>
+              <span class="badge">Software Engineering</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+          </div>
 
-        <script src="src/js/app.js"></script>
-    </body>
+          <div class="hero-photo-wrap">
+            <div class="photo-frame">
+              <img src="src/images/walter.jpeg" alt="Walter Neto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">01 — About</div>
+        <h2 class="section-title">Who I Am</h2>
+        <div class="section-line"></div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm <strong>Walter S. C. Neto</strong>, a 5th-semester Computer
+              Science student at
+              <strong>Universidade Federal de Alagoas (UFAL)</strong>, Maceió,
+              Brazil. I'm driven by curiosity and a deep desire to solve
+              meaningful problems through technology.
+            </p>
+            <p>
+              Currently interning at <strong>EDGE Academy</strong>, where I'm
+              growing as a developer and strengthening my soft skills in a
+              fast-paced, innovative environment. It's been an incredible
+              learning experience so far. I've also had the privilege of serving
+              as a <strong>Teaching Assistant for Graph Theory</strong>, which
+              deepened both my knowledge and my passion for teaching.
+            </p>
+            <p>
+              Beyond the keyboard, I'm a <strong>Christian</strong>, a
+              <strong>husband</strong>, and a <strong>father</strong> — my wife
+              and my little boy keep me grounded and remind me every day what
+              really matters. Faith, family, and hard work are the pillars I
+              build everything else upon.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num">5th</span>
+                <span class="stat-label">Semester of 8</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">CS</span>
+                <span class="stat-label">Bachelor's Degree</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">UFAL</span>
+                <span class="stat-label">University</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">EDGE</span>
+                <span class="stat-label">Current Internship</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-label" style="margin-bottom: 1.25rem">
+              Interests
+            </div>
+            <ul class="interests-list">
+              <li>Fullstack Web Development</li>
+              <li>Artificial Intelligence &amp; Machine Learning</li>
+              <li>Software Engineering &amp; Architecture</li>
+              <li>Algorithms &amp; Data Structures</li>
+              <li>Graph Theory</li>
+              <li>Open Source Development</li>
+              <li>Teaching &amp; Knowledge Sharing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-label">02 — Experience</div>
+        <h2 class="section-title">My Journey</h2>
+        <div class="section-line"></div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-period">2025 — Present</div>
+            <div class="tl-role">Software Developer Intern</div>
+            <div class="tl-org">EDGE Academy &middot; Maceió, AL</div>
+            <p class="tl-desc">
+              Working as a software development intern, contributing to
+              real-world projects and growing in a collaborative,
+              high-performance environment. Engaging with modern development
+              practices, tools, and technologies.
+            </p>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-period">2025</div>
+            <div class="tl-role">Teaching Assistant — Graph Theory</div>
+            <div class="tl-org">
+              Universidade Federal de Alagoas &middot; IC
+            </div>
+            <p class="tl-desc">
+              Assisted professor Rian Pinheiro in teaching Graph Theory to
+              undergraduate students. Helped clarify concepts, guided
+              problem-solving sessions, and supported students through the
+              coursework.
+            </p>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-period">2023 — Present</div>
+            <div class="tl-role">Bachelor of Computer Science</div>
+            <div class="tl-org">
+              Universidade Federal de Alagoas &middot; UFAL
+            </div>
+            <p class="tl-desc">
+              Currently in the 5th of 8 semesters. Studying algorithms, data
+              structures, software engineering, computer networks, artificial
+              intelligence, and more. Engaged in academic and extracurricular
+              activities throughout the program.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">03 — Projects</div>
+        <h2 class="section-title">What I've Built</h2>
+        <div class="section-line"></div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-number">01 / Project</div>
+            <h3 class="project-title">Graph Algorithms</h3>
+            <p class="project-desc">
+              This is the implementation of 5 graph algorithms: Dijkstra,
+              Bellman-Ford, Kosaraju, Kruskal and Prim. The project was crucial
+              to consolidate my graph theory knowledge. It was written in C.
+            </p>
+            <div class="project-tags">
+              <span class="tag">C</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">Graph Theory</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/wscneto/algoritmos-grafos"
+                target="_blank"
+                class="project-link"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <!-- <a href="#" class="project-link">
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                  />
+                </svg>
+                Live Demo
+              </a> -->
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-number">02 / Project</div>
+            <h3 class="project-title">Bookaholic</h3>
+            <p class="project-desc">
+              Bookaholic is an online bookstore made with Vue.js, Python and
+              MySQL. In this project, I put the Extreme Programming agile
+              methodology into practice to satisfy customer's needs. I also
+              implemented a microservices architecture, separating the program
+              into 6 services: user, catalog, order, review, recommendation, and
+              an API gateway. These were made using the Flask library.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/wscneto/bookaholic"
+                target="_blank"
+                class="project-link"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-number">03 / Project</div>
+            <h3 class="project-title">Online Chess using TCP/IP</h3>
+            <p class="project-desc">
+              Chess is one of my favorite games ever. Why not practice network
+              programming while having some fun? This is the idea behind my
+              online chess game. It was made in Python, using the socket
+              library. The program uses TCP protocol to connect client and
+              server using their IP addresses.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Computer Networks</span>
+              <span class="tag">Socket</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/wscneto/chess-on-tcp"
+                target="_blank"
+                class="project-link"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <!-- <a href="#" class="project-link">
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                  />
+                </svg>
+                Live Demo
+              </a> -->
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-number">04 / Project</div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">
+              This very website. Hand-crafted with pure HTML, CSS, and
+              JavaScript. Deployed on GitHub Pages. Designed with a dark,
+              aesthetic and animated background based on graphs.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/wscneto/wscneto.github.io"
+                target="_blank"
+                class="project-link"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-label" style="justify-content: center">
+          04 — Contact
+        </div>
+        <h2 class="section-title" style="text-align: center">Let's Connect</h2>
+        <div class="section-line" style="margin: 1.5rem auto 3rem"></div>
+        <div class="contact-inner">
+          <p>
+            I'm always open to interesting conversations or collaboration
+            opportunities. Feel free to reach out!
+          </p>
+          <a href="mailto:contato.walter@pm.me" class="btn btn-primary"
+            >Send an email</a
+          >
+          <div class="social-links">
+            <a
+              href="https://github.com/wscneto"
+              target="_blank"
+              class="social-link"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/wscneto"
+              target="_blank"
+              class="social-link"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://www.instagram.com/wscneto_/"
+              target="_blank"
+              class="social-link"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="wrap">
+        <p>Designed &amp; built by <span>Walter Neto</span> &copy; 2026</p>
+      </div>
+    </footer>
+
+    <script src="src/js/app.js"></script>
+  </body>
 </html>
